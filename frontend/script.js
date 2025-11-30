@@ -1,4 +1,4 @@
-const API_BASE = "http://localhost:8000/api"; // при деплої змінити на URL бекенду
+const API_BASE = "https://student-faq-bot-nj11.onrender.com/api"; // при деплої змінити на URL бекенду
 const chat = document.getElementById("chat");
 const form = document.getElementById("chat-form");
 const input = document.getElementById("question");

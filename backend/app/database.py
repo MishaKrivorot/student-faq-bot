@@ -1,10 +1,10 @@
-# backend/app/database.py
 import sqlite3
-from typing import Generator
+from pathlib import Path
 
-DB_PATH = "app/faqs.db"
+BASE_DIR = Path(__file__).resolve().parent
+DB_PATH = BASE_DIR / "faqs.db"
 
-def get_db_connection() -> sqlite3.Connection:
+def get_db_connection():
     conn = sqlite3.connect(DB_PATH, check_same_thread=False)
     conn.row_factory = sqlite3.Row
     return conn
